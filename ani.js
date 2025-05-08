@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const headingElement = document.getElementById('typing-effect');
-    const texts = ['🙏 namaskaram','🕉️ upanayanam', '🌷 Fri May 30'];
+    const texts = ['🙏🏾 NAMASTE','🕉️ UPANAYANAM', '🌷 Fri May 30'];
     let textIndex = 0;  //txt typing rn
     let charIndex = 0;  //char in that txt which is typing rn
 
