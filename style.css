@@ -180,3 +180,13 @@ h2 {
     height: 100%;
     border: none;
 }
+
+.ganesh-blessing {
+    margin-top: 3rem; /* approx 2 thumb distances */
+    text-align: center;
+}
+
+.ganesh-blessing img {
+    max-width: 255px; /* adjust size as needed */
+    height: auto;
+}
