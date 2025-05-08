@@ -328,7 +328,7 @@ footer {
     left: 0;
     width: 100%;
     text-align: left;
-    padding: 0.5px;
+    padding: 0px;
     background: linear-gradient(90deg, #ffa908, #ff6b00, #000); /* Gradient from orange to dark */
     font-family: 'IM Fell English SC', serif;
     font-size: 13px;
