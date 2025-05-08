@@ -147,6 +147,7 @@ h2 {
 .expertise-wrapper {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .profile-pic {
@@ -154,23 +155,59 @@ h2 {
     height: 250px;
     border-radius: 50%;
     margin-right: 20px;
+    flex-shrink: 0;
 }
 
 .expertise-text {
     max-width: 600px;
+    flex: 1;
 }
 
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .about-me-content {
+        padding: 15px;
+    }
+
+    .about-me-content h2 {
+        font-size: 20px;
+    }
+
+    .about-me-content p {
+        font-size: 14px;
+    }
+
+    .expertise-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        margin: 0 0 20px 0;
+    }
+
+    .expertise-text {
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+/* Responsive Embed Container */
 /* Responsive Embed Container */
 .iframe-container {
     position: relative;
     width: 100%;
     max-width: 400px;
     aspect-ratio: 9 / 16;
-    margin: 40px auto;
+    margin: 90px auto;
     overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    box-shadow: 0 17px 22px rgb(247, 119, 0);
+    background-color: #e00a0a; /* Change this to any color you want */
 }
+
 
 .iframe-container iframe {
     position: absolute;
@@ -190,3 +227,69 @@ h2 {
     max-width: 255px; /* adjust size as needed */
     height: auto;
 }
+
+
+.vertical-shiva {
+    position: fixed;
+    right: 10px;
+    top: 30%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(24, 23, 22);
+    z-index: 999;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 0 5px gold, 0 0 10px rgb(0, 0, 0), 0 0 20px rgb(0, 0, 0), 0 0 30px rgb(0, 0, 0);
+    animation: glow-pulse 2s infinite alternate;
+}
+
+.shiva-letter {
+    display: inline-block;
+    animation: glow-pulse 2s infinite alternate;
+}
+
+/* Glow Animation */
+@keyframes glow-pulse {
+    from {
+        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px orange;
+    }
+    to {
+        text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
+    }
+}
+
+/* Sparkles */
+.sparkle {
+    position: absolute;
+    font-size: 12px;
+    color: rgb(255, 0, 0);
+    animation: sparkle-fly 1.5s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+.sparkle:nth-child(2) {
+    top: -10px;
+    left: -10px;
+    animation-delay: 0s;
+}
+.sparkle:nth-child(3) {
+    top: 0px;
+    left: 10px;
+    animation-delay: 0.75s;
+}
+
+@keyframes sparkle-fly {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-10px, -20px) scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(10px, -40px) scale(0);
+        opacity: 0;
+    }
+}
+
