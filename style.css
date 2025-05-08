@@ -1,9 +1,11 @@
+/* Base Styles */
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
 }
 
+/* Heading Styles */
 .MainHeading {
     color: #693118;
     position: absolute;
@@ -25,9 +27,10 @@ h2 {
     margin: 0;
 }
 
+/* Typing Effect */
 #typing-effect {
     display: inline-block;
-    color: #000000;
+    color: #000;
 }
 
 #typing-effect::after {
@@ -47,6 +50,7 @@ h2 {
     }
 }
 
+/* Particles Background */
 #particles-js {
     background-image: url('image1.jpg');
     background-size: cover;
@@ -81,10 +85,10 @@ h2 {
 
 /* About Me Section */
 .about-me-section {
-    background-color: #000000;
+    background-color: #000;
     position: relative;
     padding: 1px 0;
-    border: 1px solid #ffffff;
+    border: 1px solid #fff;
 }
 
 .about-me-content {
@@ -96,9 +100,9 @@ h2 {
     white-space: pre-line;
     padding: 20px;
     border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-me-content::before {
@@ -163,7 +167,124 @@ h2 {
     min-width: 260px;
 }
 
-/* Media Query for smaller screens */
+/* Responsive Embed Container with Enhanced Design */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 9 / 16;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: #e00a0a;
+    box-shadow:
+        0 0 25px 5px rgba(255, 251, 0, 0.8),
+        0 0 55px 15px rgba(255, 123, 0, 0.5),
+        inset 0 0 15px rgba(0, 0, 0, 0.5);
+    animation: pulseShadow 3s infinite ease-in-out;
+}
+
+@keyframes pulseShadow {
+    0%, 100% {
+        box-shadow:
+            0 200 200px 5px rgba(255, 94, 0, 0.8),
+            0 0 55px 15px rgba(255, 132, 0, 0.5),
+            inset 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow:
+            0 0 30px 8px rgba(255, 130, 0, 0.9),
+            0 0 65px 18px rgba(255, 170, 0, 0.6),
+            inset 0 0 25px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Blessing Section */
+.ganesh-blessing {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.ganesh-blessing img {
+    max-width: 255px;
+    height: auto;
+}
+
+/* Shiva Vertical */
+.vertical-shiva {
+    position: fixed;
+    right: 10px;
+    top: 30%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: #181716;
+    z-index: 999;
+    font-family: 'Georgia', serif;
+    text-shadow: 0 0 5px gold, 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
+    animation: glow-pulse 2s infinite alternate;
+}
+
+.shiva-letter {
+    display: inline-block;
+    animation: glow-pulse 2s infinite alternate;
+}
+
+@keyframes glow-pulse {
+    from {
+        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px orange;
+    }
+    to {
+        text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
+    }
+}
+
+/* Sparkles for Additional Accent */
+.sparkle {
+    position: absolute;
+    font-size: 12px;
+    color: red;
+    animation: sparkle-fly 1.5s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+.sparkle:nth-child(2) {
+    top: -10px;
+    left: -10px;
+    animation-delay: 0s;
+}
+
+.sparkle:nth-child(3) {
+    top: 0px;
+    left: 10px;
+    animation-delay: 0.75s;
+}
+
+@keyframes sparkle-fly {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-10px, -20px) scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(10px, -40px) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Responsive Tweaks */
 @media (max-width: 768px) {
     .about-me-content {
         padding: 15px;
@@ -197,100 +318,5 @@ h2 {
     .about-me-content button {
         width: 100%;
         max-width: 250px;
-    }
-}
-
-/* Responsive Embed Container */
-.iframe-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 9 / 16;
-    margin: 90px auto;
-    overflow: hidden;
-    border-radius: 30px;
-    box-shadow: 0 17px 22px rgb(247, 119, 0);
-    background-color: #e00a0a;
-}
-
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-.ganesh-blessing {
-    margin-top: 3rem;
-    text-align: center;
-}
-
-.ganesh-blessing img {
-    max-width: 255px;
-    height: auto;
-}
-
-.vertical-shiva {
-    position: fixed;
-    right: 10px;
-    top: 30%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(24, 23, 22);
-    z-index: 999;
-    font-family: 'Georgia', serif;
-    text-shadow: 0 0 5px gold, 0 0 10px rgb(0, 0, 0), 0 0 20px rgb(0, 0, 0), 0 0 30px rgb(0, 0, 0);
-    animation: glow-pulse 2s infinite alternate;
-}
-
-.shiva-letter {
-    display: inline-block;
-    animation: glow-pulse 2s infinite alternate;
-}
-
-@keyframes glow-pulse {
-    from {
-        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px orange;
-    }
-    to {
-        text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
-    }
-}
-
-.sparkle {
-    position: absolute;
-    font-size: 12px;
-    color: rgb(255, 0, 0);
-    animation: sparkle-fly 1.5s infinite ease-in-out;
-    opacity: 0.8;
-}
-
-.sparkle:nth-child(2) {
-    top: -10px;
-    left: -10px;
-    animation-delay: 0s;
-}
-
-.sparkle:nth-child(3) {
-    top: 0px;
-    left: 10px;
-    animation-delay: 0.75s;
-}
-
-@keyframes sparkle-fly {
-    0% {
-        transform: translate(0, 0) scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: translate(-10px, -20px) scale(1.5);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translate(10px, -40px) scale(0);
-        opacity: 0;
     }
 }
