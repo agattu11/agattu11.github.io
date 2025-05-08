@@ -4,10 +4,10 @@
             "value":80
         },
         "color":{
-            "value":"#f9f3f4"
+            "value":"#FFD700"
         },
         "shape":{
-            "type":"circle",
+            "type":"star",
             "stroke":{
                 "width":1,
                 "color":"#ccc"
