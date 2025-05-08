@@ -5,7 +5,7 @@ body {
 }
 
 .MainHeading {
-    color: #f9f3f4;
+    color: #693118;
     position: absolute;
     text-align: center;
     top: 40%;
@@ -27,7 +27,7 @@ h2 {
 
 #typing-effect {
     display: inline-block;
-    color: #f9f3f4;
+    color: #000000;
 }
 
 #typing-effect::after {
@@ -35,7 +35,7 @@ h2 {
     margin-left: 2px;
     opacity: 1;
     animation: blink-caret 0.75s infinite;
-    color: #fff; 
+    color: #ff0000; 
 }
 
 @keyframes blink-caret {
