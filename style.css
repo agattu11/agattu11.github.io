@@ -47,7 +47,6 @@ h2 {
     }
 }
 
-/* Background with image */
 #particles-js {
     background-image: url('image1.jpg');
     background-size: cover;
@@ -148,19 +147,20 @@ h2 {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .profile-pic {
     width: 300px;
     height: 250px;
     border-radius: 50%;
-    margin-right: 20px;
     flex-shrink: 0;
+    object-fit: cover;
 }
 
 .expertise-text {
-    max-width: 600px;
     flex: 1;
+    min-width: 260px;
 }
 
 /* Media Query for smaller screens */
@@ -179,22 +179,27 @@ h2 {
 
     .expertise-wrapper {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
     .profile-pic {
-        width: 150px;
-        height: 150px;
-        margin: 0 0 20px 0;
+        width: 160px;
+        height: 160px;
+        margin-bottom: 15px;
     }
 
     .expertise-text {
-        text-align: center;
         max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .about-me-content button {
+        width: 100%;
+        max-width: 250px;
     }
 }
 
-/* Responsive Embed Container */
 /* Responsive Embed Container */
 .iframe-container {
     position: relative;
@@ -205,9 +210,8 @@ h2 {
     overflow: hidden;
     border-radius: 30px;
     box-shadow: 0 17px 22px rgb(247, 119, 0);
-    background-color: #e00a0a; /* Change this to any color you want */
+    background-color: #e00a0a;
 }
-
 
 .iframe-container iframe {
     position: absolute;
@@ -219,15 +223,14 @@ h2 {
 }
 
 .ganesh-blessing {
-    margin-top: 3rem; /* approx 2 thumb distances */
+    margin-top: 3rem;
     text-align: center;
 }
 
 .ganesh-blessing img {
-    max-width: 255px; /* adjust size as needed */
+    max-width: 255px;
     height: auto;
 }
-
 
 .vertical-shiva {
     position: fixed;
@@ -248,7 +251,6 @@ h2 {
     animation: glow-pulse 2s infinite alternate;
 }
 
-/* Glow Animation */
 @keyframes glow-pulse {
     from {
         text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 15px orange;
@@ -258,7 +260,6 @@ h2 {
     }
 }
 
-/* Sparkles */
 .sparkle {
     position: absolute;
     font-size: 12px;
@@ -272,6 +273,7 @@ h2 {
     left: -10px;
     animation-delay: 0s;
 }
+
 .sparkle:nth-child(3) {
     top: 0px;
     left: 10px;
@@ -292,4 +294,3 @@ h2 {
         opacity: 0;
     }
 }
-
