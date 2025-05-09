@@ -210,6 +210,8 @@ h2 {
 }
 
 /* Blessing Section */
+
+
 .ganesh-blessing {
     margin-top: 3rem;
     text-align: center;
@@ -218,6 +220,25 @@ h2 {
 .ganesh-blessing img {
     max-width: 255px;
     height: auto;
+}
+
+/* Brother image on top, fading */
+.brother-img {
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 255px;
+    height: auto;
+    animation: dissolveEffect 5s infinite ease-in-out;
+    z-index: 2;
+    pointer-events: none;
+}
+
+@keyframes dissolveEffect {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* Shiva Vertical */
