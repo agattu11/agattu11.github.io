@@ -230,7 +230,7 @@ h2 {
     transform: translateX(-50%);
     max-width: 255px;
     height: auto;
-    animation: dissolveEffect 5s infinite ease-in-out;
+    animation: dissolveEffect 6s infinite ease-in-out;
     z-index: 2;
     pointer-events: none;
 }
